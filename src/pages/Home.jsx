@@ -10,7 +10,7 @@ import { mallData } from '../data/mallData'
 
 export default function Home() {
   return (
-    <>
+    <div className="min-h-screen">
       <Header mall={mallData} />
       <Categories categories={mallData.categories} />
       <FeaturedStores stores={mallData.featuredStores} />
@@ -19,6 +19,6 @@ export default function Home() {
       <Reviews reviews={mallData.reviews} />
       <PopularTags tags={mallData.popularTags} />
       <Footer mall={mallData} />
-    </>
+    </div>
   )
 }

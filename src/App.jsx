@@ -7,26 +7,6 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 
 function App() {
-  useEffect(() => {
-    const revealElements = () => {
-      const reveals = document.querySelectorAll('.scroll-reveal')
-      reveals.forEach((element) => {
-        const windowHeight = window.innerHeight
-        const elementTop = element.getBoundingClientRect().top
-        const elementVisible = 150
-
-        if (elementTop < windowHeight - elementVisible) {
-          element.classList.add('visible')
-        }
-      })
-    }
-
-    window.addEventListener('scroll', revealElements)
-    revealElements()
-
-    return () => window.removeEventListener('scroll', revealElements)
-  }, [])
-
   return (
     <Router>
       <Routes>

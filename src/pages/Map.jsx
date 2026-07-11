@@ -56,7 +56,7 @@ export default function Map() {
           
           <div className="glass-dark rounded-3xl overflow-hidden border border-cyan-500/20">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7246987654321!2d-0.1234567!3d5.6037189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10207b0d5e4e4e4e%3A0x4e4e4e4e4e4e4e4e!2sWest%20Hills%20Mall!5e0!3m2!1sen!2sgh!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.7246987654321!2d-0.2345678!3d5.6037189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10207b0d5e4e4e4e%3A0x4e4e4e4e4e4e4e4e!2sWest%20Hills%20Mall%2C%20Accra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1234567890"
               width="100%"
               height="400"
               style={{ border: 0 }}

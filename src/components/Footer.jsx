@@ -2,6 +2,17 @@ import { MapPin, Phone, Globe, Mail, Heart, Facebook, Instagram, Twitter, Crown,
 import { Link } from 'react-router-dom'
 
 export default function Footer({ mall }) {
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubscribe = (e) => {
+    e.preventDefault()
+    if (email) {
+      setSubscribed(true)
+      setEmail('')
+      setTimeout(() => setSubscribed(false), 3000)
+    }
+  }
   return (
     <footer className="relative py-20 border-t border-gold-500/20 bg-brand-950">
       {/* Premium background decoration */}
@@ -43,16 +54,25 @@ export default function Footer({ mall }) {
                 <Sparkles className="w-5 h-5 text-gold-400" />
                 <span className="text-gold-300 font-medium">Newsletter</span>
               </div>
-              <div className="flex gap-3">
+              <form onSubmit={handleSubscribe} className="flex gap-3">
                 <input 
                   type="email" 
                   placeholder="Enter your email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 bg-slate-900/50 border border-gold-500/30 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-gold-500/50 transition-colors"
+                  required
                 />
-                <button className="bg-gradient-to-r from-gold-500 to-gold-600 px-6 py-3 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-gold">
-                  Subscribe
+                <button 
+                  type="submit"
+                  className="bg-gradient-to-r from-gold-500 to-gold-600 px-6 py-3 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-gold"
+                >
+                  {subscribed ? 'Subscribed!' : 'Subscribe'}
                 </button>
-              </div>
+              </form>
+              {subscribed && (
+                <p className="text-green-400 text-sm mt-2">Thank you for subscribing!</p>
+              )}
             </div>
           </div>
           

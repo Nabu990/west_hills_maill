@@ -1,4 +1,5 @@
 import { MapPin, Phone, Globe, Clock, Star, ArrowRight, Sparkles, Building2, Users, Award, Navigation, Heart, Zap } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { cn } from '../utils/cn'
 
 export default function Header({ mall }) {
@@ -124,14 +125,14 @@ export default function Header({ mall }) {
           
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-6 animate-fadeInUp delay-400">
-            <button className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 px-10 py-5 rounded-full font-bold text-xl hover:from-cyan-400 hover:via-blue-400 hover:to-cyan-400 transition-all hover:scale-105 flex items-center gap-4 shadow-cyan border-2 border-cyan-400/60">
+            <Link to="/stores" className="group bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 px-10 py-5 rounded-full font-bold text-xl hover:from-cyan-400 hover:via-blue-400 hover:to-cyan-400 transition-all hover:scale-105 flex items-center gap-4 shadow-cyan border-2 border-cyan-400/60">
               <span>Explore Mall</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-            </button>
-            <button className="group glass-cyan px-10 py-5 rounded-full font-bold text-xl hover:bg-cyan-500/20 transition-all flex items-center gap-4 border border-cyan-500/40">
+            </Link>
+            <Link to="/map" className="group glass-cyan px-10 py-5 rounded-full font-bold text-xl hover:bg-cyan-500/20 transition-all flex items-center gap-4 border border-cyan-500/40">
               <span>View Map</span>
               <Navigation className="w-6 h-6 group-hover:rotate-45 transition-transform" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

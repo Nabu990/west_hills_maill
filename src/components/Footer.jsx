@@ -1,4 +1,5 @@
 import { MapPin, Phone, Globe, Mail, Heart, Facebook, Instagram, Twitter, Crown, Gem, Sparkles, ArrowUp } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Footer({ mall }) {
   return (
@@ -61,29 +62,29 @@ export default function Footer({ mall }) {
               <h4 className="font-semibold text-lg text-gold-300">Contact Information</h4>
             </div>
             <div className="space-y-4">
-              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group">
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group cursor-pointer">
                 <div className="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 group-hover:bg-gold-500/20 transition-colors">
                   <MapPin className="w-5 h-5 text-gold-400" />
                 </div>
-                <span>{mall.address}</span>
+                <Link to="/map" className="hover:text-white">{mall.address}</Link>
               </div>
-              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group">
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group cursor-pointer">
                 <div className="w-10 h-10 rounded-full bg-luxury-500/10 flex items-center justify-center border border-luxury-500/20 group-hover:bg-luxury-500/20 transition-colors">
                   <Phone className="w-5 h-5 text-luxury-400" />
                 </div>
-                <span>{mall.phone}</span>
+                <Link to="/contact" className="hover:text-white">{mall.phone}</Link>
               </div>
-              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group">
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group cursor-pointer">
                 <div className="w-10 h-10 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 group-hover:bg-gold-500/20 transition-colors">
                   <Globe className="w-5 h-5 text-gold-400" />
                 </div>
-                <span>{mall.website}</span>
+                <a href={`https://${mall.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">{mall.website}</a>
               </div>
-              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group">
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors group cursor-pointer">
                 <div className="w-10 h-10 rounded-full bg-luxury-500/10 flex items-center justify-center border border-luxury-500/20 group-hover:bg-luxury-500/20 transition-colors">
                   <Mail className="w-5 h-5 text-luxury-400" />
                 </div>
-                <span>info@westhillsmallgh.com</span>
+                <Link to="/contact" className="hover:text-white">info@westhillsmallgh.com</Link>
               </div>
             </div>
           </div>
@@ -94,21 +95,27 @@ export default function Footer({ mall }) {
               <h4 className="font-semibold text-lg text-luxury-300">Quick Links</h4>
             </div>
             <ul className="space-y-3">
-              <li className="text-white/70 hover:text-gold-300 cursor-pointer transition-colors flex items-center gap-3 group">
-                <span className="text-gold-400 group-hover:translate-x-1 transition-transform">→</span>
-                About Us
+              <li>
+                <Link to="/about" className="text-white/70 hover:text-gold-300 cursor-pointer transition-colors flex items-center gap-3 group">
+                  <span className="text-gold-400 group-hover:translate-x-1 transition-transform">→</span>
+                  About Us
+                </Link>
               </li>
-              <li className="text-white/70 hover:text-gold-300 cursor-pointer transition-colors flex items-center gap-3 group">
-                <span className="text-gold-400 group-hover:translate-x-1 transition-transform">→</span>
-                Store Directory
+              <li>
+                <Link to="/stores" className="text-white/70 hover:text-gold-300 cursor-pointer transition-colors flex items-center gap-3 group">
+                  <span className="text-gold-400 group-hover:translate-x-1 transition-transform">→</span>
+                  Store Directory
+                </Link>
               </li>
               <li className="text-white/70 hover:text-luxury-300 cursor-pointer transition-colors flex items-center gap-3 group">
                 <span className="text-luxury-400 group-hover:translate-x-1 transition-transform">→</span>
                 Events
               </li>
-              <li className="text-white/70 hover:text-gold-300 cursor-pointer transition-colors flex items-center gap-3 group">
-                <span className="text-gold-400 group-hover:translate-x-1 transition-transform">→</span>
-                Contact
+              <li>
+                <Link to="/contact" className="text-white/70 hover:text-gold-300 cursor-pointer transition-colors flex items-center gap-3 group">
+                  <span className="text-gold-400 group-hover:translate-x-1 transition-transform">→</span>
+                  Contact
+                </Link>
               </li>
               <li className="text-white/70 hover:text-luxury-300 cursor-pointer transition-colors flex items-center gap-3 group">
                 <span className="text-luxury-400 group-hover:translate-x-1 transition-transform">→</span>

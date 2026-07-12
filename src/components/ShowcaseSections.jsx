@@ -26,7 +26,7 @@ export default function ShowcaseSections({ sections }) {
   const prevImage = () => {
     const sectionImages = sections[currentSectionIndex].images
     const newIndex = (currentImageIndex - 1 + sectionImages.length) % sectionImages.length
-    setCurrentIndex(newIndex)
+    setCurrentImageIndex(newIndex)
     setSelectedImage(sectionImages[newIndex])
   }
 

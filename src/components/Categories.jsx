@@ -31,7 +31,7 @@ export default function Categories({ categories }) {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Crown className="w-6 h-6 text-gold-400" />
             <h2 className="text-5xl font-bold gradient-text">Shop by Category</h2>
@@ -48,8 +48,7 @@ export default function Categories({ categories }) {
             return (
               <div
                 key={name}
-                className="group relative glass rounded-3xl p-8 card-hover cursor-pointer scroll-reveal overflow-hidden"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group relative glass rounded-3xl p-8 card-hover cursor-pointer overflow-hidden"
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>

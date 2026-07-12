@@ -10,7 +10,7 @@ export default function Reviews({ reviews }) {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Crown className="w-6 h-6 text-gold-400" />
             <h2 className="text-5xl font-bold gradient-text">Customer Reviews</h2>
@@ -23,8 +23,7 @@ export default function Reviews({ reviews }) {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="glass rounded-3xl p-8 card-hover scroll-reveal relative overflow-hidden"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="glass rounded-3xl p-8 card-hover relative overflow-hidden"
             >
               <Quote className="absolute top-6 right-6 w-16 h-16 text-gold-500/20" />
               

@@ -41,7 +41,7 @@ export default function ShowcaseSections({ sections }) {
           </div>
           
           <div className="container-custom relative z-10">
-            <div className="text-center mb-16 scroll-reveal">
+            <div className="text-center mb-16">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Crown className="w-6 h-6 text-gold-400" />
                 <h2 className="text-5xl font-bold gradient-text">{section.title}</h2>
@@ -54,14 +54,13 @@ export default function ShowcaseSections({ sections }) {
               {section.images.map((image, imageIndex) => (
                 <div
                   key={imageIndex}
-                  className="group glass rounded-2xl overflow-hidden card-hover cursor-pointer scroll-reveal relative"
+                  className="group glass rounded-2xl overflow-hidden card-hover cursor-pointer relative"
                   onClick={() => openLightbox(sectionIndex, imageIndex)}
-                  style={{ animationDelay: `${imageIndex * 50}ms` }}
                 >
                   <img
                     src={image}
                     alt={`${section.title} ${imageIndex + 1}`}
-                    className="w-full height-56 object-cover image-zoom"
+                    className="w-full h-56 object-cover image-zoom"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-4">
                     <ZoomIn className="w-8 h-8 text-white" />

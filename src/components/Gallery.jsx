@@ -35,7 +35,7 @@ export default function Gallery({ images }) {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Crown className="w-6 h-6 text-gold-400" />
             <h2 className="text-5xl font-bold gradient-text">Photo Gallery</h2>
@@ -48,9 +48,8 @@ export default function Gallery({ images }) {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative glass rounded-3xl overflow-hidden card-hover cursor-pointer scroll-reveal"
+              className="group relative glass rounded-3xl overflow-hidden card-hover cursor-pointer"
               onClick={() => openLightbox(index)}
-              style={{ animationDelay: `${index * 50}ms` }}
             >
               <img
                 src={image.src}

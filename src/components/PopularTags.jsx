@@ -10,7 +10,7 @@ export default function PopularTags({ tags }) {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <TrendingUp className="w-8 h-8 text-gold-400" />
             <h2 className="text-5xl font-bold gradient-text">Popular Tags</h2>
@@ -19,12 +19,11 @@ export default function PopularTags({ tags }) {
           <p className="text-white/70 max-w-2xl mx-auto text-lg">What customers are searching for</p>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-4 scroll-reveal">
+        <div className="flex flex-wrap justify-center gap-4">
           {tags.map((tag, index) => (
             <div
               key={index}
               className="group glass-gold px-6 py-3 rounded-full border border-gold-500/30 hover:border-gold-400 hover:bg-gold-500/20 hover:scale-105 transition-all cursor-pointer shadow-gold card-hover"
-              style={{ animationDelay: `${index * 50}ms` }}
             >
               <Crown className="w-5 h-5 text-gold-400 group-hover:text-gold-300" />
               <span className="font-semibold text-white group-hover:text-gold-200">{tag.name}</span>

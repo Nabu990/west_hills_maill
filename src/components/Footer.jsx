@@ -1,5 +1,6 @@
 import { MapPin, Phone, Globe, Mail, Heart, Facebook, Instagram, Twitter, Crown, Gem, Sparkles, ArrowUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Footer({ mall }) {
   const [email, setEmail] = useState('')
@@ -13,6 +14,7 @@ export default function Footer({ mall }) {
       setTimeout(() => setSubscribed(false), 3000)
     }
   }
+
   return (
     <footer className="relative py-20 border-t border-gold-500/20 bg-brand-950">
       {/* Premium background decoration */}

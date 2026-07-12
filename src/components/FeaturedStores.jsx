@@ -10,7 +10,7 @@ export default function FeaturedStores({ stores }) {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16 scroll-reveal">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Crown className="w-6 h-6 text-gold-400" />
             <h2 className="text-5xl font-bold gradient-text">Featured Stores</h2>
@@ -23,8 +23,7 @@ export default function FeaturedStores({ stores }) {
           {stores.map((store, index) => (
             <div
               key={index}
-              className="group glass rounded-3xl overflow-hidden card-hover scroll-reveal relative"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group glass rounded-3xl overflow-hidden card-hover relative"
             >
               <div className="relative h-72 overflow-hidden">
                 <img

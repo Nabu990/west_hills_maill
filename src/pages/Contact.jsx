@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle, ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -53,6 +54,13 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container-custom py-20">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-gold-500/20 hover:bg-gold-500/30 border border-gold-500/30 rounded-xl transition-all hover:scale-105 group"
+        >
+          <ArrowLeft className="w-5 h-5 text-gold-400 group-hover:-translate-x-1 transition-transform" />
+          <span className="text-gold-300 font-medium">Back to Home</span>
+        </Link>
         <h1 className="text-5xl font-bold mb-4 gradient-text">Contact Us</h1>
         <p className="text-xl text-white/70 mb-12">Get in touch with West Hills Mall</p>
         

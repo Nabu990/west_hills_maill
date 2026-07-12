@@ -1,11 +1,18 @@
-import { useState } from 'react'
-import { MapPin, Navigation, Phone, Clock } from 'lucide-react'
+import { MapPin, Navigation, Phone, Clock, ArrowLeft } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { mallData } from '../data/mallData'
 
 export default function Map() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container-custom py-20">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-gold-500/20 hover:bg-gold-500/30 border border-gold-500/30 rounded-xl transition-all hover:scale-105 group"
+        >
+          <ArrowLeft className="w-5 h-5 text-gold-400 group-hover:-translate-x-1 transition-transform" />
+          <span className="text-gold-300 font-medium">Back to Home</span>
+        </Link>
         <h1 className="text-5xl font-bold mb-4 gradient-text">Location</h1>
         <p className="text-xl text-white/70 mb-12">Find us at West Hills Mall</p>
         
